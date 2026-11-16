@@ -1,0 +1,18 @@
+┌───────────────┐       ┌───────────────┐       ┌───────────────┐
+│   clients     │       │    orders     │       │    tours      │
+├───────────────┤       ├───────────────┤       ├───────────────┤
+│ client_id PK  │◄──┐   │ order_id   PK │   ┌──►│ tour_id    PK │
+│ last_name     │   └───┤ client_id  FK │   │   │ tour_name     │
+│ first_name    │       │ tour_id    FK ├───┘   │ country       │
+│ passport  UQ  │       │ employee_id FK│       │ price         │
+│ phone         │       │ status_id  FK │       │ tour_type     │
+└───────────────┘       │ order_number  │       └───────────────┘
+                        │ order_date    │
+┌───────────────┐       │ persons_count │       ┌───────────────┐
+│  employees    │       │ total_price   │       │order_statuses │
+├───────────────┤       └───────┬───────┘       ├───────────────┤
+│ employee_id PK│◄──────────────┘               │ status_id  PK │
+│ last_name     │                               │ status_name UQ│
+│ position      │                               └───────▲───────┘
+└───────────────┘                                       │
+                        orders.status_id ───────────────┘

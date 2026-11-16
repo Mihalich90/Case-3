@@ -1,0 +1,4 @@
+clients (1) ────< (N) orders (N) >──── (1) tours
+                        │
+                        ├── (N) >──── (1) employees
+                        └── (N) >──── (1) order_statuses
